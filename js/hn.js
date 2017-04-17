@@ -445,20 +445,21 @@ function changeCommentPage() {
   comments.style.marginTop = "3rem";
 
   // a bit fragile
-  var selfPost = document.getElementsByClassName("self-post-text")[0];
   var textArea = document.getElementsByTagName("textarea")[0];
-  textArea.style.width = "100%";
+  if (textArea) {
+    textArea.style.width = "100%";
+    var selfPost = document.getElementsByClassName("self-post-text")[0];
+    var explanation = selfPost.getElementsByTagName("span")[0];
+    explanation.style.display = "block";
 
-  var explanation = selfPost.getElementsByTagName("span")[0];
-  explanation.style.display = "block";
-
-  var topLevels = $("[level=0]");
-  if (topLevels.length >= 2) {
-    for (var i = 1, len = topLevels.length; i < len; i++) {
-      var el = topLevels[i]
-      el.style.borderTop = "1px dotted rgba(255, 102, 0, 0.33)";
-      el.style.width = "100%";
-      el.style.paddingTop = "1rem";
+    var topLevels = $("[level=0]");
+    if (topLevels.length >= 2) {
+      for (var i = 1, len = topLevels.length; i < len; i++) {
+        var el = topLevels[i]
+        el.style.borderTop = "1px dotted rgba(255, 102, 0, 0.33)";
+        el.style.width = "100%";
+        el.style.paddingTop = "1rem";
+      }
     }
   }
 }

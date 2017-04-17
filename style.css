@@ -499,22 +499,22 @@ a.original_poster,
 .default div {
   margin-bottom: 6px !important;
 }
-/* first comment paragraph has no margins */
-.c00 {
-  font-size: 16px !important;
-  color: #202020 !important;
-  line-height: 22px;
-  font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-}
+
+/*
+Applying a different text color would be nice but there seem to be a lot
+of .cae, .c9c classes generated which you can't style easily within CSS.
+
+color: #202020 !important;
+*/
+
 /* pure black font is a bit hard on the eyes with the large font size */
-.comment p,
+.comment,
 .comment > font {
   font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
   font-size: 16px !important;
   margin-top: 10px !important;
   margin-bottom: 10px !important;
   line-height: 25px;
-  color: #202020;
 }
 
 /* Wrap <pre> tags (indented text) so they don't have an annoying horizontal scrollbar */
