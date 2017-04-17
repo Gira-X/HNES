@@ -97,8 +97,8 @@ table tr td {
   position: absolute;
   height: 100%;
   top: 0px;
-  padding-top: 7px;
-  padding-right: 3px;
+  padding-top: 12px;
+  padding-right: 5px;
   right: 0px;
 }
 .comments {
@@ -268,7 +268,7 @@ body#item-body .title {
 }
 #index-body #content td:nth-child(3) center {
   position: absolute;
-  top: 5px;
+  top: 12px;
 }
 /* poll vote ups */
 #item-body .item-header tr:last-child img[src="http://ycombinator.com/images/grayarrow.gif"],

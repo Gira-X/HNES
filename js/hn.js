@@ -463,6 +463,16 @@ function changeCommentPage() {
   }
 }
 
+function changePostsList() {
+  var itemList = document.getElementsByClassName("itemlist")[0];
+  itemList.style.marginTop = "2rem";
+
+  var aThing = document.getElementsByClassName("athing");
+  for (var i = 0, len = aThing.length; i < len; i++) {
+    aThing[i].style.height = "40px";
+  }
+}
+
 var HN = {
     init: function() {
 
@@ -479,7 +489,7 @@ var HN = {
         if (logout_elem.length)
           HN.rewriteUserNav(logout_elem.parent());
 
-        var pathname = window.location.pathname;
+	var pathname = window.location.pathname;
         //More link - can be post index, threads, comments, etc
         //threads is like "etcet's comments"
         //comment listings are like "New Comments"
@@ -522,6 +532,7 @@ var HN = {
         var postPagesRE = /^(?:\/|\/news|\/newest|\/best|\/active|\/classic|\/submitted|\/saved|\/jobs|\/noobstories|\/ask|\/news2|\/over|\/show|\/shownew|\/hidden)$/;
         if (postPagesRE.test(pathname)) {
           HN.doPostsList();
+	  changePostsList();
 
           function remove_first_tr() {
             $("body #content td table tbody tr").filter(":first").remove();
