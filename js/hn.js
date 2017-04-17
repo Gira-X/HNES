@@ -435,6 +435,14 @@ function preorder(n, visit, skip) {
   }
 }
 
+function changeCommentPage() {
+  var itemHeader = document.getElementsByClassName("item-header")[0];
+  itemHeader.style.maxWidth = "900px";
+  itemHeader.style.margin = "0 auto";
+  var comments = document.getElementsByClassName("comment-tree")[0];
+  comments.style.maxWidth = "900px";
+  comments.style.margin = "0 auto";
+}
 
 var HN = {
     init: function() {
@@ -517,6 +525,7 @@ var HN = {
         else if (pathname == '/item' ||
                  pathname == '/more') {
           HN.doCommentsList(pathname, track_comments);
+	  changeCommentPage();
         }
 		else if (pathname == '/favorites' ||
 		         pathname == '/upvoted') {
