@@ -455,10 +455,7 @@ function changeCommentPage() {
     var topLevels = $("[level=0]");
     if (topLevels.length >= 2) {
       for (var i = 1, len = topLevels.length; i < len; i++) {
-        var el = topLevels[i]
-        el.style.borderTop = "1px dotted rgba(255, 102, 0, 0.33)";
-        el.style.width = "100%";
-        el.style.paddingTop = "1rem";
+        topLevels[i].style.paddingTop = "1.5rem";
       }
     }
   }

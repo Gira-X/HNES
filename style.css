@@ -92,13 +92,18 @@ table tr td {
   text-align: center;
 }
 
+.ind > img {
+  border-top: 1px dashed rgb(190, 190, 190);
+}
+
 /*position comment and score tally at the top even if story line is multi-line*/
 #index-body .score, #index-body .comments {
   position: absolute;
   height: 100%;
   top: 0px;
   padding-top: 12px;
-  padding-right: 5px;
+  text-align: center;
+  padding-left: 15px;
   right: 0px;
 }
 .comments {
