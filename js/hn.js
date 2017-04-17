@@ -443,6 +443,11 @@ function changeCommentPage() {
   comments.style.maxWidth = "900px";
   comments.style.margin = "0 auto";
   comments.style.marginTop = "3rem";
+
+  // a bit fragile
+  var selfPost = document.getElementsByClassName("self-post-text")[0];
+  var explanation = selfPost.getElementsByTagName("span")[0];
+  explanation.style.display = "block";
 }
 
 var HN = {
