@@ -442,6 +442,7 @@ function changeCommentPage() {
   var comments = document.getElementsByClassName("comment-tree")[0];
   comments.style.maxWidth = "900px";
   comments.style.margin = "0 auto";
+  comments.style.marginTop = "3rem";
 }
 
 var HN = {
