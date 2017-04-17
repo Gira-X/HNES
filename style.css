@@ -720,7 +720,7 @@ body#login-body tr#content form td:first-child {
 
 form input[type="text"],
 form input[type="password"] {
-  padding: 3px;
+  padding: 7px;
 }
 
 body#login-body {
