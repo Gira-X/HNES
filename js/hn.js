@@ -450,7 +450,10 @@ function changeCommentPage() {
     textArea.style.width = "100%";
     var selfPost = document.getElementsByClassName("self-post-text")[0];
     var explanation = selfPost.getElementsByTagName("span")[0];
-    explanation.style.display = "block";
+    // did it disappear?
+    if (explanation) {
+      explanation.style.display = "block";
+    }
 
     var topLevels = $("[level=0]");
     if (topLevels.length >= 2) {
